@@ -1,0 +1,11 @@
+{
+  "name": "nodejs_basic",
+  "version": "1.0.0",
+  "description": "1. What is nodejs? A. Js is a language which works/execute inside the Browser only. Why? because the browser has the js engine to execute the js.    js engine is only present in the browser so, to execute this js outside the browser was not possible.    Ryan Dahl (who developer of node) he took v8 engine and embedded with c++ and called the result node. Now because of this    js can be execute outside the browser. Nodejs is a runtime environment for javascipt.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

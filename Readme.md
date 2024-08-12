@@ -15,4 +15,7 @@ A. When we create some app we need to install the packages. we use npm to mange 
 A. npm initialise it create a file or template that helps in execution of our project as it will contain al the information about the application.
    it will also create package.json (configuration file). 
 
-5. 
+
+## models in nodes js
+
+1. 

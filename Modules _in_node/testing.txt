@@ -1,0 +1,2 @@
+Hello m testing how to create a file using fs.writeFileSync
+1723458224779 Hey there
