@@ -1,28 +1,17 @@
-const http = require("http");
-const fs = require("fs")
+const express = require('express')
 
-//creating a server/ initialisation
-const myServer = http.createServer((req, res)=>{
-    if(req.url === "/favicon.ico") return res.end(); // will stop req log of favicon
-    const log = `${Date.now()}: ${req.url} new req received \n`;
-    // fs.appendFileSync("log.txt", log)
-    fs.appendFile("log.txt", log,()=>{
-        switch(req.url){
-            case"/": res.end("homePage");
-            break;
-            case"/about": res.end("About Page is here");
-            break;
-            default: res.end("404")
-        }
-    })
-} );
+const app = express();
 
-
-// server need to listin to a port or it need a port to run at.
-myServer.listen(8000,()=>{
-    console.log("server started")
+app.get('/',(req, res)=>{
+res.send("Hello from homepage")
 })
 
+app.get('/about',(req, res)=>{
+    res.send("Hello from about")
+    })
+    
+    app.get('*',(req, res)=>{
+        res.send("not found 404")
+        })
 
-// once the server is up you may check you localhost with port 8000, you will get 
-// a msj as req recrd
+app.listen(8000, ()=>{console.log("Server is up")})
